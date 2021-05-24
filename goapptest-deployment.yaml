@@ -19,7 +19,7 @@ spec:
         image: samuelwendolin/go-app-test:v1 
         imagePullPolicy: IfNotPresent
         ports:
-          - containerPort: 8080  # Should match the port number that the Go application listens on
+          - containerPort: 9080  # Should match the port number that the Go application listens on
         livenessProbe:           # To check the health of the Pod
           httpGet:
             path: /health
