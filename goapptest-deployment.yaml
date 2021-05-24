@@ -2,7 +2,8 @@
 apiVersion: apps/v1
 kind: Deployment                 # Type of Kubernetes resource
 metadata:
-  name: go-app-test           # Name of the Kubernetes resource
+  name: go-app-test  # Name of the Kubernetes resource
+  namespace: test-apps
 spec:
   replicas: 3                    # Number of pods to run at any given time
   selector:
@@ -34,5 +35,3 @@ spec:
             scheme: HTTP
           initialDelaySeconds: 5
           timeoutSeconds: 1
-
----
